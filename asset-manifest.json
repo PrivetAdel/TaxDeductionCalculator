@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/TaxDeductionCalculator/static/css/main.f8eb3787.chunk.css",
-    "main.js": "/TaxDeductionCalculator/static/js/main.85ce0727.chunk.js",
-    "main.js.map": "/TaxDeductionCalculator/static/js/main.85ce0727.chunk.js.map",
+    "main.css": "/TaxDeductionCalculator/static/css/main.210499d5.chunk.css",
+    "main.js": "/TaxDeductionCalculator/static/js/main.ecf67d02.chunk.js",
+    "main.js.map": "/TaxDeductionCalculator/static/js/main.ecf67d02.chunk.js.map",
     "runtime-main.js": "/TaxDeductionCalculator/static/js/runtime-main.ab5faadf.js",
     "runtime-main.js.map": "/TaxDeductionCalculator/static/js/runtime-main.ab5faadf.js.map",
     "static/js/2.dadd562c.chunk.js": "/TaxDeductionCalculator/static/js/2.dadd562c.chunk.js",
     "static/js/2.dadd562c.chunk.js.map": "/TaxDeductionCalculator/static/js/2.dadd562c.chunk.js.map",
     "index.html": "/TaxDeductionCalculator/index.html",
-    "static/css/main.f8eb3787.chunk.css.map": "/TaxDeductionCalculator/static/css/main.f8eb3787.chunk.css.map",
+    "static/css/main.210499d5.chunk.css.map": "/TaxDeductionCalculator/static/css/main.210499d5.chunk.css.map",
     "static/js/2.dadd562c.chunk.js.LICENSE.txt": "/TaxDeductionCalculator/static/js/2.dadd562c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/TaxDeductionCalculator/static/media/LabGrotesque-Regular.f45d8fdb.woff2",
     "static/media/popup.css": "/TaxDeductionCalculator/static/media/checked.db42bbfd.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.ab5faadf.js",
     "static/js/2.dadd562c.chunk.js",
-    "static/css/main.f8eb3787.chunk.css",
-    "static/js/main.85ce0727.chunk.js"
+    "static/css/main.210499d5.chunk.css",
+    "static/js/main.ecf67d02.chunk.js"
   ]
 }
