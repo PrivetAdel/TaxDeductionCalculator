@@ -59,7 +59,8 @@ const Payment = ({value}) => {
             <input
               id={index}
               type="checkbox"
-              className="payment-checkbox visually-hidden" />
+              className="payment-checkbox visually-hidden"
+              defaultChecked />
             <label
               htmlFor={index}
               className="payment-label"
