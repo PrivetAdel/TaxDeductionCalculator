@@ -25,24 +25,26 @@ function сleanAValue(value) {
 
 const Popup = ({showPopup}) => {
   const [valueSalary, setValueSalary] = useState('');
-  const [isSalay, setIsSalay] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [isCalculate, setCalculate] = useState(false);
+  const [isEmpty, setEmpty] = useState(false);
+  const [isMinLengthError, setMinLengthError] = useState(false);
   const [borderColor, setBorderColor] = useState('#DFE3E6');
 
   function сhangeSalary(evt) {
     setValueSalary(addRub(addSpace(evt.target.value)));
-    setIsSalay(false);
-    setIsError(false);
+    setCalculate(false);
+    setEmpty(false);
+    setMinLengthError(false);
     setBorderColor('#DFE3E6');
   };
 
   function calculateSumPay(evt) {
     evt.preventDefault();
 
-    (valueSalary.length >= 6) ? setIsSalay(true) : setIsSalay(false);
-
-    valueSalary ? setIsError(false) : setIsError(true);
-    valueSalary ? setBorderColor('#DFE3E6') : setBorderColor('#EA0029');
+    (valueSalary.length >= 6) ? setCalculate(true) : setCalculate(false);
+    valueSalary ? setEmpty(false) : setEmpty(true);
+    (valueSalary.length >= 6) ? setMinLengthError(false) : setMinLengthError(true);
+    (valueSalary.length >= 6) ? setBorderColor('#DFE3E6') : setBorderColor('#EA0029');
   };
 
   function submitForm(evt) {
@@ -53,8 +55,12 @@ const Popup = ({showPopup}) => {
     return <Payment value={сleanAValue(valueSalary)} />
   };
 
-  function showError() {
+  function showErrorEmpty() {
     return <p className="salary-error">Поле обязательно для заполнения</p>
+  };
+
+  function showErrorMin() {
+    return <p className="salary-error">Минимальная сумма для рассчета 1 000 ₽</p>
   };
 
   return (
@@ -91,7 +97,8 @@ const Popup = ({showPopup}) => {
               style={{borderColor: borderColor}}
               autoFocus
               required />
-            {isError ? showError() : null}
+            {isEmpty ? showErrorEmpty() : null}
+            {(isMinLengthError && !isEmpty) ? showErrorMin() : null}
             <button
               className="btn btn-calculate-salary"
               onClick={calculateSumPay}>
@@ -99,7 +106,7 @@ const Popup = ({showPopup}) => {
             </button>
           </fieldset>
 
-          {isSalay ? renderPayments() : null}
+          {isCalculate ? renderPayments() : null}
           <Choice />
 
           <button
