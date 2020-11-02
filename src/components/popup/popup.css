@@ -1,0 +1,284 @@
+.overlay {
+  background-color: #E5E5E5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 32px 16px 16px;
+}
+
+.popup-header {
+  display: flex;
+  position: relative;
+}
+
+.popup-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.btn-popup-close {
+  position: absolute;
+  top: -10px;
+  right: 6px;
+  border: none;
+  background-color: transparent;
+}
+
+.popup-description {
+  color: #808080;
+  margin: 16px 0 24px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.popup-fieldset {
+  border: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.salary,
+.payment {
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.salary-label {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.salary-input {
+  border: 1px solid #DFE3E6;
+  border-radius: 3px;
+  padding: 8px 10px;
+  margin: 8px 0;
+  outline: none;
+  transition: all .3s;
+}
+
+.salary-input:hover {
+  border-color: black;
+}
+
+.salary-input:disabled {
+  border-color: #808080;
+}
+
+.salary-error {
+  color: #EA0029;
+  font-size: 10px;
+  line-height: 12px;
+  margin: -4px 0 8px;
+}
+
+.btn-calculate-salary {
+  border: none;
+  background-color: transparent;
+  color: #EA0029;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  padding: 0;
+  align-self: flex-start;
+  transition: all .3s;
+}
+
+.btn-calculate-salary:hover,
+.btn-calculate-salary:focus {
+  color: #F53A31;
+}
+
+.choice {
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.choice-title {
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.choice-wrapper {
+  flex-grow: 1;
+}
+
+.choice-label {
+  background-color: #EEF0F2;
+  color: black;
+  border-radius: 50px;
+  padding: 9px 12px;
+  margin: 5px;
+  line-height: 24px;
+  transition: all .3s;
+  cursor: url("../../cursor.svg"), default;
+}
+
+.choice-label:hover,
+.choice-label:focus {
+  background-color: #DFE3E6;
+}
+
+.choice-radio:checked + .choice-label {
+  background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+  color: white;
+}
+
+.payment-title {
+  font-weight: 500;
+  line-height: 24px;
+  padding-right: 75px;
+}
+
+.payment-item {
+  margin: 16px 0;
+  padding: 0 0 16px;
+  position: relative;
+  border-bottom: 1px solid #DFE3E6;
+}
+
+.payment-label {
+  padding-left: 34px;
+  position: relative;
+  outline: none;
+  transition: all .3s;
+  cursor: url("../../cursor.svg"), default;
+}
+
+.payment-period {
+  color: #95989a;
+}
+
+.payment-label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #DFE3E6;
+  background-color: white;
+  border-radius: 6px;
+  margin-right: 12px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.payment-checkbox:disabled + .payment-label::before {
+  background-color: #BEC5CC;
+}
+
+.payment-checkbox:checked + .payment-label::before {
+  background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+  border: none;
+}
+
+.payment-checkbox:hover + .payment-label::before,
+.payment-checkbox:focus + .payment-label::before {
+  border: 1px solid #000000;
+}
+
+.payment-checkbox:checked + .payment-label::after,
+.payment-checkbox:disabled + .payment-label::after {
+  content: "";
+  background-image: url("./checked.svg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 11px;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+}
+
+.btn-add {
+  margin-top: auto;
+  border: none;
+  background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+  border-radius: 6px;
+  color: white;
+  padding: 16px;
+  transition: all .3s;
+  outline: none;
+}
+
+.btn-add:hover,
+.btn-add:focus {
+  background-color: #EA0029;
+}
+
+.btn-add:disabled {
+  background-color: #BEC5CC;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}
+
+@media (min-width: 768px) {
+  .overlay {
+    padding: 5rem 0;
+  }
+
+  .popup {
+    border-radius: 30px;
+    max-width: 453px;
+    align-self: baseline;
+    padding: 32px;
+  }
+
+  .popup-title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .btn-popup-close {
+    top: -5px;
+    right: -9px;
+  }
+
+  .popup-description {
+    font-size: 14px;
+    line-height: 24px;
+    padding-right: 15px;
+  }
+
+  .choice {
+    flex-direction: row;
+    margin-top: 12px;
+  }
+
+  .choice-wrapper {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .popup {
+    max-width: 552px;
+  }
+}

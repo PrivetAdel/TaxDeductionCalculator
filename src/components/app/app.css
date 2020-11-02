@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;;
+}
+
+.btn {
+  cursor: url("../../cursor.svg"), default;
+}
+
+.btn-main {
+  background-color: transparent;
+  border: 1px solid white;
+  filter: drop-shadow(0px 0px 44px #CFDAE7);
+  border-radius: 6px;
+  color: white;
+  align-self: center;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  transition: all .3s;
+}
+
+.btn-main:hover,
+.btn-main:active,
+.btn-main:focus {
+  background-color: white;
+  color: black;
+  filter: none;
+}
