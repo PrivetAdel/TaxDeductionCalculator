@@ -91,7 +91,6 @@ const Popup = ({showPopup}) => {
               className="salary-input"
               placeholder="Введите данные"
               autoComplete="off"
-              error=""
               value={valueSalary}
               onChange={сhangeSalary}
               style={{borderColor: borderColor}}
