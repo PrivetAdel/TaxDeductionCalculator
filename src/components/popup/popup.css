@@ -15,7 +15,8 @@
   flex-direction: column;
   background-color: white;
   padding: 32px 16px 16px;
-  place-self: baseline;
+  align-self: baseline;
+  width: 100vw;
   min-height: 100%;
 }
 
@@ -248,7 +249,7 @@
 
   .popup {
     border-radius: 30px;
-    max-width: 453px;
+    width: 453px;
     padding: 32px;
     min-height: auto;
   }
@@ -281,6 +282,6 @@
 
 @media (min-width: 1440px) {
   .popup {
-    max-width: 552px;
+    width: 552px;
   }
 }
