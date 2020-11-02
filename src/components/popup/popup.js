@@ -56,11 +56,11 @@ const Popup = ({showPopup}) => {
   };
 
   function showErrorEmpty() {
-    return <p className="salary-error">Поле обязательно для заполнения</p>
+    return <p className="salary-error-text">Поле обязательно для заполнения</p>
   };
 
   function showErrorMin() {
-    return <p className="salary-error">Минимальная сумма для рассчета 1 000 ₽</p>
+    return <p className="salary-error-text">Минимальная сумма для рассчета 1 000 ₽</p>
   };
 
   return (
