@@ -2,17 +2,17 @@ import React from 'react';
 
 const Choice = () => {
   return (
-    <fieldset className="popup-fieldset choice">
-      <span className="choice-title">Что уменьшаем?</span>
-      <div className="choice-wrapper">
+    <fieldset className="popup__fieldset choice">
+      <span className="choice__title">Что уменьшаем?</span>
+      <div className="choice__wrapper">
         <input
           type="radio"
           name="choice-radio"
-          className="choice-radio visually-hidden"
+          className="choice__radio visually-hidden"
           id="payment"
           defaultChecked />
         <label
-          className="choice-label"
+          className="choice__label"
           htmlFor="payment"
           tabIndex="6">
           Платёж
@@ -21,10 +21,10 @@ const Choice = () => {
         <input
           type="radio"
           name="choice-radio"
-          className="choice-radio visually-hidden"
+          className="choice__radio visually-hidden"
           id="date" />
         <label
-          className="choice-label"
+          className="choice__label"
           htmlFor="date"
           tabIndex="7">
           Срок

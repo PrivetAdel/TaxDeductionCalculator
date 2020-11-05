@@ -56,31 +56,31 @@ const Popup = ({showPopup}) => {
   };
 
   function showErrorEmpty() {
-    return <p className="salary-error-text">Поле обязательно для заполнения</p>
+    return <p className="salary__error--text">Поле обязательно для заполнения</p>
   };
 
   function showErrorMin() {
-    return <p className="salary-error-text">Минимальная сумма для рассчета 1 000 ₽</p>
+    return <p className="salary__error--text">Минимальная сумма для рассчета 1 000 ₽</p>
   };
 
   return (
     <div className="overlay">
       <section className="popup">
-        <div className="popup-header">
-          <h2 className="popup-title">Налоговый вычет</h2>
+        <div className="popup__header">
+          <h2 className="popup__title">Налоговый вычет</h2>
           <button
-            className="btn btn-popup-close"
+            className="btn popup__btn-close"
             onClick={showPopup}>
             <img src={close} alt="close" />
           </button>
         </div>
 
-        <p className="popup-description">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не&nbsp;более&nbsp;13% от своего официального годового дохода.</p>
+        <p className="popup__description">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не&nbsp;более&nbsp;13% от своего официального годового дохода.</p>
 
-        <form className="popup-form">
-          <fieldset className="popup-fieldset salary">
+        <form className="popup__form">
+          <fieldset className="popup__fieldset salary">
             <label
-              className="salary-label"
+              className="salary__label"
               htmlFor="salary">
               Ваша зарплата в месяц
             </label>
@@ -88,7 +88,7 @@ const Popup = ({showPopup}) => {
               type="text"
               inputMode="numeric"
               id="salary"
-              className="salary-input"
+              className="salary__input"
               placeholder="Введите данные"
               autoComplete="off"
               value={valueSalary}
@@ -99,7 +99,7 @@ const Popup = ({showPopup}) => {
             {isEmpty ? showErrorEmpty() : null}
             {(isMinLengthError && !isEmpty) ? showErrorMin() : null}
             <button
-              className="btn btn-calculate-salary"
+              className="btn salary__btn-calculate"
               onClick={calculateSumPay}>
               Рассчитать
             </button>
@@ -109,7 +109,7 @@ const Popup = ({showPopup}) => {
           <Choice />
 
           <button
-            className="btn btn-add"
+            className="btn popup__btn-add"
             onClick={submitForm}
             type="submit">
             Добавить

@@ -51,23 +51,23 @@ const Payment = ({value}) => {
   );
 
   return (
-    <fieldset className="popup-fieldset payment">
-      <span className="payment-title">Итого можете внести в&nbsp;качестве досрочных:</span>
-      <ul className="payment-list">
+    <fieldset className="popup__fieldset payment">
+      <span className="payment__title">Итого можете внести в&nbsp;качестве досрочных:</span>
+      <ul className="payment__list">
         {payments.map((item, index) => (
-          <li key={index} className="payment-item">
+          <li key={index} className="payment__item">
             <input
               id={index}
               type="checkbox"
-              className="payment-checkbox visually-hidden"
+              className="payment__checkbox visually-hidden"
               defaultChecked />
             <label
               htmlFor={index}
-              className="payment-label"
+              className="payment__label"
               tabIndex={index + 1}>
               <span>{item} рублей</span>
               &nbsp;
-              <span className="payment-period">
+              <span className="payment__period">
                 {inAYear(index + 1)}
               </span>
             </label>

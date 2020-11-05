@@ -12,7 +12,7 @@ const App = () => {
   return (
     <main className="main">
       <button
-        className="btn btn-main"
+        className="btn main__btn"
         onClick={showPopup}>
         Налоговый вычет
       </button>
