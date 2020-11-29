@@ -38,6 +38,8 @@
   right: 6px;
   border: none;
   background-color: transparent;
+  display: flex;
+  padding: 6px;
 }
 
 .popup__description {
@@ -147,6 +149,10 @@
 .choice__label:hover,
 .choice__label:focus {
   background-color: #DFE3E6;
+}
+
+.choice__radio:focus + .choice__label {
+  border: 1px solid #000000;
 }
 
 .choice__radio:checked + .choice__label {
