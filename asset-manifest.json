@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/TaxDeductionCalculator/static/css/main.84e8e67d.chunk.css",
-    "main.js": "/TaxDeductionCalculator/static/js/main.09aa7f5b.chunk.js",
-    "main.js.map": "/TaxDeductionCalculator/static/js/main.09aa7f5b.chunk.js.map",
+    "main.css": "/TaxDeductionCalculator/static/css/main.69975546.chunk.css",
+    "main.js": "/TaxDeductionCalculator/static/js/main.5a494710.chunk.js",
+    "main.js.map": "/TaxDeductionCalculator/static/js/main.5a494710.chunk.js.map",
     "runtime-main.js": "/TaxDeductionCalculator/static/js/runtime-main.ab5faadf.js",
     "runtime-main.js.map": "/TaxDeductionCalculator/static/js/runtime-main.ab5faadf.js.map",
     "static/js/2.dadd562c.chunk.js": "/TaxDeductionCalculator/static/js/2.dadd562c.chunk.js",
     "static/js/2.dadd562c.chunk.js.map": "/TaxDeductionCalculator/static/js/2.dadd562c.chunk.js.map",
     "index.html": "/TaxDeductionCalculator/index.html",
-    "static/css/main.84e8e67d.chunk.css.map": "/TaxDeductionCalculator/static/css/main.84e8e67d.chunk.css.map",
+    "static/css/main.69975546.chunk.css.map": "/TaxDeductionCalculator/static/css/main.69975546.chunk.css.map",
     "static/js/2.dadd562c.chunk.js.LICENSE.txt": "/TaxDeductionCalculator/static/js/2.dadd562c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/TaxDeductionCalculator/static/media/LabGrotesque-Regular.f45d8fdb.woff2",
-    "static/media/popup.css": "/TaxDeductionCalculator/static/media/checked.db42bbfd.svg",
-    "static/media/close.075fa808.svg": "/TaxDeductionCalculator/static/media/close.075fa808.svg",
-    "static/media/app.css": "/TaxDeductionCalculator/static/media/cursor.b80b7c78.svg"
+    "static/media/Popup.css": "/TaxDeductionCalculator/static/media/checked.4d38f02e.svg",
+    "static/media/close.a3644d3d.svg": "/TaxDeductionCalculator/static/media/close.a3644d3d.svg",
+    "static/media/App.css": "/TaxDeductionCalculator/static/media/cursor.caa326e2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ab5faadf.js",
     "static/js/2.dadd562c.chunk.js",
-    "static/css/main.84e8e67d.chunk.css",
-    "static/js/main.09aa7f5b.chunk.js"
+    "static/css/main.69975546.chunk.css",
+    "static/js/main.5a494710.chunk.js"
   ]
 }
