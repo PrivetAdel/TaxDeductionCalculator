@@ -1,8 +1,26 @@
  import React from 'react';
 
-const Payment = ({value}) => {
+ const inAYear = (num) => {
+  switch(true) {
+    case (num % 10 === 2 && num < 10):
+      return `во ${num}-ой год`;
+    case (num % 10 === 3 && (num < 10 || num > 20)):
+      return `в ${num}-ий год`;
+    case (num % 10 === 6 && (num < 10 || num > 20)):
+      return `в ${num}-ой год`;
+    case (num % 10 === 7 && (num < 10 || num > 20)):
+      return `в ${num}-ой год`;
+    case (num % 10 === 8 && (num < 10 || num > 20)):
+      return `в ${num}-ой год`;
+    case (num % 10 === 2 && num > 20):
+      return `в ${num}-ой год`;
+    default:
+      return `в ${num}-ый год`;
+  }
+};
 
-  function paymentСalculation(value) {
+const Payment = ({value}) => {
+  const paymentСalculation = (value) => {
     const paymentItems = [];
     const maxPay = 260000;
     const paymentAYear = Math.floor((value * 12) * 0.13);
@@ -23,25 +41,6 @@ const Payment = ({value}) => {
     }
 
     return paymentItems;
-  };
-
-  function inAYear(num) {
-    switch(true) {
-      case (num % 10 === 2 && num < 10):
-        return `во ${num}-ой год`;
-      case (num % 10 === 3 && (num < 10 || num > 20)):
-        return `в ${num}-ий год`;
-      case (num % 10 === 6 && (num < 10 || num > 20)):
-        return `в ${num}-ой год`;
-      case (num % 10 === 7 && (num < 10 || num > 20)):
-        return `в ${num}-ой год`;
-      case (num % 10 === 8 && (num < 10 || num > 20)):
-        return `в ${num}-ой год`;
-      case (num % 10 === 2 && num > 20):
-        return `в ${num}-ой год`;
-      default:
-        return `в ${num}-ый год`;
-    }
   };
 
   const payments = paymentСalculation(value).map((item) => {

@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import Popup from '../popup';
-import './app.css';
+import Popup from '../Popup';
+import './App.css';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  function showPopup() {
+  const showPopup = () => {
     setIsOpen((s) => !s)
   }
 

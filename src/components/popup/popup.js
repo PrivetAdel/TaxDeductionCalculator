@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
-import Payment from './payment';
-import Choice from './choice';
+import Payment from './Payment';
+import Choice from './Choice';
 import close from './close.svg';
-import './popup.css';
+import './Popup.css';
 
-function addSpace(value) {
+const addSpace = (value) => {
   return value
             .replace(/\s+|[^\d]/g, '')
             .replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1')
             .replace(/^\s/g, '')
 };
 
-function addRub(value) {
+const addRub = (value) => {
   if (!value) {
     return value.replace(/ ₽/g, '');
   }
@@ -19,7 +19,7 @@ function addRub(value) {
   return (value + ' ₽').replace(/[^\d ₽]| ₽(?!$)/g, '');
 };
 
-function сleanAValue(value) {
+const сleanAValue = (value) => {
   return value.replace(/\D/g, '');
 };
 
@@ -30,7 +30,7 @@ const Popup = ({showPopup}) => {
   const [isMinLengthError, setMinLengthError] = useState(false);
   const [borderColor, setBorderColor] = useState('#DFE3E6');
 
-  function сhangeSalary(evt) {
+  const сhangeSalary = (evt) => {
     setValueSalary(addRub(addSpace(evt.target.value)));
     setCalculate(false);
     setEmpty(false);
@@ -38,7 +38,7 @@ const Popup = ({showPopup}) => {
     setBorderColor('#DFE3E6');
   };
 
-  function calculateSumPay(evt) {
+  const calculateSumPay = (evt) => {
     evt.preventDefault();
 
     (valueSalary.length >= 6) ? setCalculate(true) : setCalculate(false);
@@ -47,19 +47,19 @@ const Popup = ({showPopup}) => {
     (valueSalary.length >= 6) ? setBorderColor('#DFE3E6') : setBorderColor('#EA0029');
   };
 
-  function submitForm(evt) {
+  const submitForm = (evt) => {
     evt.preventDefault();
   };
 
-  function renderPayments() {
+  const renderPayments = () =>{
     return <Payment value={сleanAValue(valueSalary)} />
   };
 
-  function showErrorEmpty() {
+  const showErrorEmpty = () => {
     return <p className="salary__error--text">Поле обязательно для заполнения</p>
   };
 
-  function showErrorMin() {
+  const showErrorMin = () => {
     return <p className="salary__error--text">Минимальная сумма для рассчета 1 000 ₽</p>
   };
 
